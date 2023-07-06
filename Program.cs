@@ -22,27 +22,36 @@ void countLengthOfStrings(string[] array1, string[] array2)
     int j = 0;
     for (int i = 0; i < array1.Length; i++)
     {
-    if(array1[i].Length <= 3)
+    if( array1[i].Length <= 3)
         {
         array2[j] = array1[i];
         j++;
         }
+    
     }
-}
-void PrintArray(string[] array)
-{
-    var s = "";
-    for (int i = 0; i < array.Length; i++)
-    {
-        
-        s = string.Join(", ", array); 
-    }
-
-    Console.WriteLine(s);
+    
 }
 countLengthOfStrings(array1, array2);
-Console.WriteLine("Я создам массив из строк, длиной до 3 символов. Искомый массив это: ");
+
+void PrintArray(string[] array)
+{
+    
+        var s = "";
+        for (int i = 0; i < array.Length; i++)
+        {
+        
+        s = string.Join(", ", array); 
+        }
+       
+        Console.WriteLine($"Я создам массив из строк, длиной до 3 символов.\n Искомый массив это: {s} ");
+            
+        
+    
+}
+
+  
 
 PrintArray(array2);
+
 
 
